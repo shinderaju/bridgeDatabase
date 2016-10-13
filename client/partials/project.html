@@ -1,0 +1,36 @@
+<div >
+    <div nav-header></div>
+</div>
+<div class="navbar navbar-inverse navbar-fixed-left">
+  <ul class="nav navbar-nav" id="top">
+      <br>
+   <a ui-sref="project">
+        <button type="button" class="btn btn-primary" id="myBtn1" ng-click="database()" style="width:90%">Home</button>
+    </a>
+    <a ui-sref=".database">
+        <button type="button" class="btn btn-primary" id="myBtn1" ng-click="database()" style="width:90%">Database</button>
+    </a>
+    <a ui-sref=".storage">
+        <button type="button" class="btn btn-primary" id="myBtn1" ng-click="storage()" style="width:90%">Storage</button>
+    </a>
+  </ul>
+</div>
+
+    <br>
+   
+
+
+<div align="center">
+    <ui-view>
+        <div align="center" class="circle-singleline" style="margin-top:52px;">
+            Hi
+        </div>
+        Add bridgeDb to your web app
+    </ui-view>
+</div>
+
+<!-- <div class='circle-multiline'>
+    <span style='font-size: 2.5em'>Big Text</span></br>
+    here is more text
+    <br>new line
+</div> -->

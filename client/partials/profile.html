@@ -1,0 +1,59 @@
+<div>
+    <div nav-header></div>
+</div>
+<div class="container" ng-controller="projectCtrl">
+    <!--<h1 style="color:black;">hi{{param}}</h1>-->
+    <div class="container">
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-primary" id="myBtn">create project</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:35px 50px;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4><span class="glyphicon glyphicon-lock"></span> Create Project</h4>
+                    </div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="projectname">project name</label>
+                                <input type="text" class="form-control" id="projectname" placeholder="Enter name" ng-model="projectName">
+                            </div>
+                            <!-- <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button> -->
+                            <button type="submit" ng-click="createProject()" class="btn btn-success btn-block" data-dismiss="modal"><span class="glyphicon glyphicon-off"></span> Create </button>
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+     <div class="container">
+        <div ng-repeat="d in names track by $index">
+            <div class="col-sm-4">
+                <div class="div1">
+
+                        <button class=" button Gray" ng-click="project(d._id)">{{d}}</button>
+                    </div>
+                </div>
+            </div>
+</div>
+    </div>
+
+
+<script>
+    $(document).ready(function() {
+        $("#myBtn").click(function() {
+            $("#myModal").modal();
+        });
+    });
+</script>

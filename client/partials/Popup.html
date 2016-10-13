@@ -1,0 +1,50 @@
+<div ng-controller="submitController">
+
+    <!-- <div class="modal fade" id="demo-2" tabindex="-1">
+        <div class="modal-dialog"> -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" ng-click="close()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title caps"><strong>Add Json file</strong></h4>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <div class="input-group">
+                    <div ng-controller="submitController">
+                        <div class="modal-body" ng-controller="submitController">
+                          <div>
+                            <label class="btn btn-default btn-file">
+                                <input type="file" name="file" file-model="myFile" id="selFile" title="Search for a file to add" />
+
+                            </label>
+
+                            <button type="button" class="btn btn-default" ng-click="close()">Cancel</button>
+                            <button class="btn btn-default" ng-click="uploadFile()" data-dismiss="modal">upload</button>
+                          </div>
+                                {{errMsg}}
+                        </div>
+
+                        <script>
+                            $(document).ready(function() {
+                                $('input[type=file]').change(function() {
+                                    var val = $(this).val().toLowerCase();
+                                    var regex = new RegExp("(.*?).(json)$");
+                                    if (!(regex.test(val))) {
+                                        $(this).val('');
+                                        alert('Incorrect file selected!!');
+                                    }
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- </div>
+    </div> -->
+
+    <!-- <div class="modal-footer">
+        <button class="btn btn-warning" type="button" ng-click="close()">Close</button>
+    </div> -->
+</div>

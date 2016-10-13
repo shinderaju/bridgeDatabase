@@ -1,0 +1,52 @@
+<!-- <div ng-controller="submitController">
+
+	 <div style="margin-top:250px;">
+  <input type="file"  name="file" file-model="myFile"  id="selFile" placeholder="ChooseFile" />
+
+  <input type="button" ng-click="uploadFile()" value="Upload" align="right"/>
+</div>
+<script>
+$(document).ready(function () {
+	$('input[type=file]').change(function () {
+		var val = $(this).val().toLowerCase();
+		var regex  =  new RegExp("(.*?).(json)$");
+		if(!(regex.test(val)))
+		{
+			$(this).val('');
+			alert('Incorrect file selected!!');
+		}
+    });
+});
+</script> -->
+<div class="header1" ng-controller="submitController">
+
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#demo-1">...</button>
+
+
+    <!-- [ Modal #1 ] -->
+    <div class="modal fade" id="demo-1" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <button class="btn btn-default" data-toggle="modal">Export Json</button>
+                    <button class="btn btn-default" data-toggle="modal" ng-click="open()" data-dismiss="modal">Import Json</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- [ Modal #2 ] -->
+
+</div>
+<div ng-controller="submitController">
+    <div class="card">
+
+        <div class="card-block">
+            <json-tree json="jsonData"></json-tree>
+        </div>
+    </div>
+</div>

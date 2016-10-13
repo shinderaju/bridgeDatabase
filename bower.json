@@ -1,0 +1,20 @@
+{
+  "name": "bridgedb",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "nextitsoftsys <yadav.jayprakash20@yahoo.in>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/nextitsoftsys/bridgeDb",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "smalltalk": "^2.1.2"
+  }
+}
